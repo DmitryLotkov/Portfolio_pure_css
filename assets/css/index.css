@@ -10,7 +10,6 @@
 }
 .container-wrapper{
     width: 1445px;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -59,8 +58,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /*border: 1px solid red;*/
+    height: 768px;
+    border: 1px solid red;
+    background: #FFFFFF;
 }
 .profile-info__text {
     display: flex;
@@ -98,15 +98,17 @@
 }
 
 .about-me__body {
+    border:1px solid  black;
+    padding: 120px 0 107px;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
     flex-direction: column;
     align-items: center;
+
 }
 
 .about-me__title {
-
+    margin-bottom: 18px;
 }
 
 .title {
@@ -127,52 +129,132 @@
 }
 
 .skills {
+    height: 610px;
+    border:1px solid black;
 }
 
-.skills__body {
+.skills__title {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+}
+.skills__row {
+    overflow: hidden;
+    width: 945px;
 }
 
 .skills__slider {
+    border: 1px solid blue;
+    position: relative;
+    width: 945px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    left: 0;
 }
 
-.skills__row {
+
+.slider__items{
+    border: 1px solid rebeccapurple;
+    display: flex;
+    height: 200px;
+    position: relative;
+    left: 0;
+    width: calc(120px *5);
+    flex-wrap: wrap;
+    gap: 7rem;
+    flex-direction: column;
 }
 
-.skills__column {
+
+.slider__item {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.item-skill {
+.slider__buttons{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    position: absolute;
+    width: inherit;
+    top:35%;
+    z-index: 10;
+}
+.slider__buttons i{
+    background-color: rgba(255, 255, 255, .25);
+    color: #1C1D21;
+    cursor: pointer;
+    height: 60px;
+    padding: 15px;
+    transition: background-color .5s, color .5s;
+
 }
 
-.item-skill__icon {
+.slider__buttons i:first-of-type{
+    padding-right: 20px;
 }
 
-.item-skill__title {
+.slider__buttons i:last-of-type{
+    padding-left: 20px;
 }
 
-.skills__image {
+.slider__buttons i:hover{
+    background-color: rgba(28,29,33, .75);
+    color: #EEEFF7;
+}
+
+.slider__skill-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.slider__skill-title {
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #828282;
+    padding-top: 24px;
+}
+
+.slider__skill-image {
+    width: 120px;
+    height: 120px;
 }
 
 @font-face {
     font-family: 'Gilroy-Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Gilroy-Bold ☞'),
+    src: local('Gilroy-Bold'),
     url('/assets/css/fonts/Gilroy-Bold.woff') format('woff');
+    url('/assets/css/fonts/Gilroy-Bold.woff2') format('woff2');
+    url('/assets/css/fonts/Gilroy-Bold.ttf') format('truetype')
 }
 
 @font-face {
     font-family: 'Gilroy-Medium';
     font-style: normal;
     font-weight: normal;
-    src: local('Gilroy-Medium ☞'),
+    src: local('Gilroy-Medium'),
     url('/assets/css/fonts/Gilroy-Medium.woff') format('woff');
+    url('/assets/css/fonts/Gilroy-Medium.woff2') format('woff2');
+    url('/assets/css/fonts/Gilroy-Medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Gilroy-Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Gilroy-Regular ☞'),
+    src: local('Gilroy-Regular'),
     url('/assets/css/fonts/Gilroy-Regular.woff') format('woff');
+    url('/assets/css/fonts/Gilroy-Regular.woff2') format('woff2');
+    url('/assets/css/fonts/Gilroy-Regular.ttf') format('truetype');
 }
